@@ -4,9 +4,8 @@ import React from 'react'
 const Header = () => {
     return (
         <>
-    
-        <div>Plant Tinder!</div>
-    </>
+            <div><h1>Welcome to Plant Tinder</h1></div>
+        </>
  )   
 }
 

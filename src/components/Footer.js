@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
-        <div>Plant Tinder!</div>
-    </>
+            <div><p>&copy; LEARN | Ira and John</p></div>
+        </>
     )
 }
 export default Footer

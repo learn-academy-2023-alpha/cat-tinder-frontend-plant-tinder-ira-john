@@ -1,12 +1,12 @@
 
-const cats = [
+const plants = [
     {
       id: 1,
       name: "Mittens",
       age: 5,
       enjoys: "sunshine and warm spots",
       image:
-        "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK0UlRqT0Q7S1RfH6pCbqMl7nq12SAQNSX7nrqeWZa&s"
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ const cats = [
       age: 6,
       enjoys: "being queen of the dogs",
       image:
-        "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy2WSqLnBr3Dl97336lCjmswSURxny2fGFi2rFy1gOHeRgyjPoNwP-HwPaVKYETtgor7Q&usqp=CAU"
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ const cats = [
       age: 3,
       enjoys: "getting all the attention",
       image:
-        "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        "https://assets-global.website-files.com/5d2fb52b76aabef62647ed9a/5f1ebce6f3495e0d680f9584_Cycad_Thumbnail2.jpg"
     }
   ]
-  export default cats
+  export default plants
