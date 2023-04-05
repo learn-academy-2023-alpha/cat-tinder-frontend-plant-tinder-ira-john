@@ -4,7 +4,7 @@ import React from 'react'
 const Home = () => {
     return (
         <>    
-            <div>Plant Tinder!</div>
+            <div><p>Its Tinder, but for plants!</p></div>
         </>
     )   
 }
