@@ -5,14 +5,14 @@ import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from "reactst
 
 const PlantShow = ({plants}) => {
     const { id } = useParams()
-  let selectedPlant = plants.find(plant => plant.id === +id) 
-  console.log(selectedPlant)
-  return (
+    let selectedPlant = plants.find(plant => plant.id === +id) 
+    console.log(selectedPlant)
+    return (
     <>
       {selectedPlant && (
         <Card
         style={{
-          width: '100%'
+          width: "100%"
         }}
       >
         <img

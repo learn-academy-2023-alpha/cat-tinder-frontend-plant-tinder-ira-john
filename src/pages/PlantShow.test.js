@@ -12,7 +12,7 @@ const renderShow = () => {
         </Routes>
       </MemoryRouter>
     )
-  }
+}
 
 
 
@@ -25,6 +25,6 @@ describe("<PlantShow />", () => {
         const enjoys = screen.getByText(`Enjoys ${plants[0].enjoys}`)
         expect(enjoys).toBeInTheDocument()
       })
-    })
+})
 
    export default PlantShow

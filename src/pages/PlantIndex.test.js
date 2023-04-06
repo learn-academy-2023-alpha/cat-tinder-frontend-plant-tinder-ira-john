@@ -16,6 +16,6 @@ describe("<PlantIndex />", () => {
         expect(plantName).toBeInTheDocument()
       })
     })
-  })
+})
 
    export default PlantIndex
