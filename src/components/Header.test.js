@@ -10,7 +10,7 @@ describe("<Header />", () => {
         </BrowserRouter>
     )
         // screen.logTestingPlaygroundURL()
-        const header = screen.getByRole('heading', {
+        const header = screen.getByRole("heading", {
             name: /welcome to plant tinder/i
           })
         expect (header).toBeInTheDocument()
