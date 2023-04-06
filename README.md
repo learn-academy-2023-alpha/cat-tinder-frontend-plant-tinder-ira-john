@@ -68,3 +68,162 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+1
+
+2
+
+
+
+
+
+Search LEARN
+
+
+
+
+
+LEARN
+More unreads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ira Holmes
+
+
+
+Ira Holmes
+
+
+Ira Holmes
+  2:32 PM
+Create-Functionality-Notes.md
+ 
+Create-Functionality-Notes.md
+​
+In PlantNew.js file
+import form variables- import {form,}
+after adding changes to the App.js file add the prop ({createPlants}) to the PlantNew function below 
+const PlantNew = () {
+    const [newPlant, setNewPlant] = useState ({
+        name: "",
+        age: "",
+        enjoys: "",
+        image: "",
+    })
+    return (
+​
+     in PlantNew add the Form code from reactstrap and get rid of any sections in the code that you don't need.
+    import the reactstrap route
+​
+    Change label name
+​
+    in the <Input set name = "name" , placeholder="What is your name"
+    type="text"
+    change password to Age and change the from above it to for = "age" , sm={2}
+    >
+    In <Input name="age" placeholder="What is your age", type="number"
+​
+    below this add for="enjoys", sm={2}
+    >
+    Enjoys <Input name="enjoys" , type="text">
+​
+    after this do image for="image, sm={2}
+    <input name="image" , type="text"    
+    )
+}
+​
+    Add above the return 
+    const handleChange = (e) => {
+   // console.log(e.target.value)
+        setNewPlant({...newPlant, [e.target.name]: e.target.value})
+}
+​
+const handleSubmit = () => {
+    createPlant(newPlant) (add an onClick={handleSubmit} name= to the button section of the form)
+}
+​
+console.log(newPlant)
+return(
+​
+​
+add the (onChange=handleChange) to all inputs within the form code below the type= input
+​
+​
+​
+​
+​
+​
+​
+​
+​
+    end at the bottom of the form code.
+)
+------------------------------
+in App.js
+const App = () => {
+const [plants, setPlants] = useState(mockPlants) => {
+    console.log("Created plant:", plant)
+}
+)
+}
+​
+-----------------------------------------------------------
+Routing back to the main page
+above the useState function in PlantNew.js setup
+​
+const navigate = useNavigate()
+​
+add navigate("/plantindex") under the createdPlant(newPlant) handle submit function.
+​
+------------------------------------------------------------
+create PlaneNew.test.js
+​
+copy and paste from another test file and remove uneeded subscribes
+​
+describe ("<PlantNew />", () => {
+    beforeEach(() = > {
+        <BrowserRouter>
+            <CatNew />
+        </BrowserRouter>
+    )
+    it("renders the PlantNew page for the user", () => {
+        const inputTitle = screen.getByText("Plant Name")
+            expect (inputTitle).toBeInTheDocument()
+    })
+​
+    it("has a form with entries for name, age, enjoys, and image", () => {
+        cost formName = screen.getByText(/plant name/i)
+        expect(formName.getAttribute("for")).toEqual("name")
+    })
+   
+    it("has a form with entries for name, age, enjoys, and image", () => {
+        cost formName = screen.getByText(/plant age/i)
+        expect(formName.getAttribute("for")).toEqual("age")
+    })
+    
+    it("has a form with entries for name, age, enjoys, and image", () => {
+        cost formName = screen.getByText(/enjoys/i)
+        expect(formName.getAttribute("for")).toEqual("enjoys")
+    })
+​
+    it("has a form with entries for name, age, enjoys, and image", () => {
+        cost formName = screen.getByText(/image url/i)
+        expect(formName.getAttribute("for")).toEqual("image")
+    })
+})
