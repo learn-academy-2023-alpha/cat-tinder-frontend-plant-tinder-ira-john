@@ -28,28 +28,36 @@ const PlantNew = ({createPlant}) => {
             <Form>
                 <FormGroup>
                     <Label for="name">Name</Label>
-                    <Input type="text" 
+                    <Input 
+                    name="name"
+                    type="text" 
                     placeholder="What is your name?"
                     onChange={handleChange} />
                 </FormGroup>
 
                 <FormGroup>
                     <Label for="age">Plant Age</Label>
-                    <Input type="number" 
+                    <Input 
+                    name="age"
+                    type="number" 
                     placeholder="What is your age?"
                     onChange={handleChange} />
                 </FormGroup>
 
                 <FormGroup>
                     <Label for="enjoys">Enjoys</Label>
-                    <Input type="text" 
+                    <Input 
+                    name="enjoys"
+                    type="text" 
                     placeholder="What do you enjoy?"
                     onChange={handleChange} />
                 </FormGroup>
 
                 <FormGroup>
                     <Label for="image">Image URL</Label>
-                    <Input type="text" 
+                    <Input 
+                    name="image"
+                    type="text" 
                     placeholder="Show us your face!"
                     onChange={handleChange} />
                 </FormGroup>
