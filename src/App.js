@@ -13,14 +13,16 @@ import mockPlants from "./mockPlants"
 
 const App = () => {
   const [plants, setPlants] = useState(mockPlants)
-  console.log(plants)
+  const createPlant = (plant) => {
+    console.log("Created plant:", plant)
+  }
     return(
         <>
           <Header />
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/plantindex" element={<PlantIndex plants={plants} />} /> 
-              <Route path="/plantnew" element={<PlantNew />} />
+              <Route path="/plantnew" element={<PlantNew createPlant={createPlant}/>} />
               <Route path="/plantshow/:id" element={<PlantShow plants={plants}/>} />
               <Route path="/plantedit" element={<PlantEdit />} />
               <Route path="/*" element={<NotFound />} />
