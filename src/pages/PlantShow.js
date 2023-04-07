@@ -2,17 +2,23 @@ import React from "react"
 import { render } from "@testing-library/react"
 import { useParams } from "react-router-dom"
 import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from "reactstrap"
+import { useNavigate } from "react-router-dom"
+import {NavLink} from "react-router-dom"
+
 
 const PlantShow = ({plants}) => {
     const { id } = useParams()
     let selectedPlant = plants.find(plant => plant.id === +id) 
-    console.log(selectedPlant)
+    
+    const navigate = useNavigate()
+
+
     return (
     <>
       {selectedPlant && (
         <Card
         style={{
-          width: "100%"
+          width: "45%"
         }}
       >
         <img
@@ -34,7 +40,16 @@ const PlantShow = ({plants}) => {
           </CardText>
         </CardBody>
       </Card>
+      
       )}
+      <Button>
+      <NavLink 
+      to={`/plantedit/${selectedPlant.id}`} 
+      className="nav-link">
+          Edit Plant Profile
+      </NavLink>
+      </Button>
+    
     </>
   )
 }

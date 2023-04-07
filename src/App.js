@@ -16,6 +16,10 @@ const App = () => {
   const createPlant = (plant) => {
     console.log("Created plant:", plant)
   }
+  const updatePlant = (plant, id) => {
+    console.log("plant:", plant)
+    console.log("id:", id)
+  }
     return(
         <>
           <Header />
@@ -24,7 +28,7 @@ const App = () => {
               <Route path="/plantindex" element={<PlantIndex plants={plants} />} /> 
               <Route path="/plantnew" element={<PlantNew createPlant={createPlant}/>} />
               <Route path="/plantshow/:id" element={<PlantShow plants={plants}/>} />
-              <Route path="/plantedit" element={<PlantEdit />} />
+              <Route path="/plantedit/:id" element={<PlantEdit plants={plants} updatePlant={updatePlant} />} />
               <Route path="/*" element={<NotFound />} />
           </Routes>
           <Footer />
