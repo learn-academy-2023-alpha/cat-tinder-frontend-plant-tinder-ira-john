@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 import { useNavigate, useParams } from "react-router-dom"
 
-    // const PlantEdit = () => {
+  
     const PlantEdit = ({ plants, updatePlant }) => {
         const { id } = useParams()
         let currentPlant = plants?.find((plant) => plant.id === +id)
@@ -21,7 +21,7 @@ import { useNavigate, useParams } from "react-router-dom"
         const navigate = useNavigate()
         const handleSubmit = () => {
             updatePlant(editPlant, currentPlant.id)
-          navigate(`/plantshow/${id}`)}
+            navigate(`/plantshow/${id}`)}
 
     return (
         <>

@@ -5,7 +5,7 @@ import {MemoryRouter, Routes, Route} from "react-router-dom"
 
 
 const renderShow = () => {
-    render(
+    render (
       <MemoryRouter initialEntries={["/plantshow/1"]}>
         <Routes>
           <Route path="/plantshow/:id" element={<PlantShow plants={plants} />} />
