@@ -13,7 +13,6 @@ import NotFound from "./pages/NotFound"
 const App = () => {
   const [plants, setPlants] = useState([])
 
-  
   const readPlant = () => {
     fetch("http://localhost:3000/plants")
       .then((response) => response.json())

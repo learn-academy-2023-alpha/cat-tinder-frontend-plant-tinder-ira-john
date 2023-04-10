@@ -1,10 +1,10 @@
 import React from "react"
-
-
 const Header = () => {
     return (
         <>
-            <div><h1>Welcome to Plant Tinder</h1></div>
+            <div className="Header">
+                <h1>Welcome to Plant Tinder</h1>
+                </div>
         </>
  )   
 }

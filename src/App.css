@@ -1,38 +1,32 @@
-.App {
+.Header {
   text-align: center;
+  background-color: darkolivegreen;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  color: rgb(156, 46, 46);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.plant-name{
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: larger;
+font-style: oblique;
+background-color: darkgreen;
+color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.plant-age{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+  background-color: darkgreen;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plant-enjoy{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+  background-color: darkgreen;
+  color: white;
 }

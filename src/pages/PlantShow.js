@@ -27,17 +27,23 @@ const PlantShow = ({plants, deletePlant}) => {
           src={selectedPlant.image}
         />
         <CardBody>
-          <CardTitle tag="h5">
+          <CardTitle tag="h5"><div className="plant-name">
             {selectedPlant.name}
+            </div>
           </CardTitle>
           <CardSubtitle
             className="mb-2 text-muted"
             tag="h6"
           >
+            <div className="plant-age">
             Age: {selectedPlant.age}
+            </div>
+
           </CardSubtitle>
           <CardText>
-            Enjoys {selectedPlant.enjoys}
+            <div className="plant-enjoy">
+            Enjoys {selectedPlant.enjoy}
+            </div>
           </CardText>
           <Button onClick={handleSubmit}> Delete Plant </Button>
         </CardBody>
