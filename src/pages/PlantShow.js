@@ -1,17 +1,18 @@
 import React from "react"
-import { render } from "@testing-library/react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from "reactstrap"
-import { useNavigate } from "react-router-dom"
 import {NavLink} from "react-router-dom"
 
 
-const PlantShow = ({plants}) => {
+const PlantShow = ({plants, deletePlant}) => {
     const { id } = useParams()
-    let selectedPlant = plants.find(plant => plant.id === +id) 
-    
     const navigate = useNavigate()
+    let selectedPlant = plants.find(plant => plant.id === +id)
 
+    const handleSubmit = () => {
+      deletePlant(id)
+      navigate("/plantindex")
+    }
 
     return (
     <>
@@ -38,6 +39,7 @@ const PlantShow = ({plants}) => {
           <CardText>
             Enjoys {selectedPlant.enjoys}
           </CardText>
+          <Button onClick={handleSubmit}> Delete Plant </Button>
         </CardBody>
       </Card>
       
@@ -47,6 +49,13 @@ const PlantShow = ({plants}) => {
       to={`/plantedit/${selectedPlant.id}`} 
       className="nav-link">
           Edit Plant Profile
+      </NavLink>
+      </Button>
+      <Button>
+      <NavLink 
+      to={`/plantindex`} 
+      className="nav-link">
+          Back to Plant Index
       </NavLink>
       </Button>
     

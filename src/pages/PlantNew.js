@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 import { Form, FormGroup, Input, Label, Button } from "reactstrap"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 const PlantNew = ({createPlant}) => {
-    
     const navigate = useNavigate()
-
     const [newPlant, setNewPlant] = useState({
         name: "",
         age: "",
-        enjoys: "",
+        enjoy: "",
         image: ""
     })
 
@@ -19,9 +17,9 @@ const PlantNew = ({createPlant}) => {
 
     const handleSubmit = () => {
         createPlant(newPlant)
-            navigate("/plantindex")
+        navigate("/plantindex")
     }
-    
+    console.log(createPlant)
     return (
         <>
             <h1>Join us to find your perfect match!</h1>
@@ -45,9 +43,9 @@ const PlantNew = ({createPlant}) => {
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="enjoys">Enjoys</Label>
+                    <Label for="enjoy">Enjoys</Label>
                     <Input 
-                    name="enjoys"
+                    name="enjoy"
                     type="text" 
                     placeholder="What do you enjoy?"
                     onChange={handleChange} />
@@ -57,7 +55,7 @@ const PlantNew = ({createPlant}) => {
                     <Label for="image">Image URL</Label>
                     <Input 
                     name="image"
-                    type="text" 
+                    type="url" 
                     placeholder="Show us your face!"
                     onChange={handleChange} />
                 </FormGroup>

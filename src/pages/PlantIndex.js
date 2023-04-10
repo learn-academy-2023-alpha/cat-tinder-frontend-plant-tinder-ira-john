@@ -35,9 +35,13 @@ const PlantIndex = ({plants}) => {
                   </Button>
                 </CardBody>
               </Card>
+              
             )
           })}
         </div>
+        <Button>
+                    <NavLink to={`/plantnew`}>New Plant Profile</NavLink>
+                  </Button>
       </>
     )
   }
