@@ -1,38 +1,76 @@
-.App {
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: -1.6px;
+  word-spacing: -2.4px;
+  color: #730505;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  color: rgb(255, 255, 255); 
+  font-size: 16px; 
+  line-height: 16px; 
+  padding: 6px; 
+  border-radius: 10px; 
+  font-family: Georgia, serif; 
+  font-weight: normal; 
+  text-decoration: none; 
+  font-style: normal; 
+  font-variant: normal; 
+  text-transform: none; 
+  background-image: linear-gradient(to right, rgb(251, 217, 226) 0%, rgb(252, 164, 164) 50%, rgb(250, 105, 105) 100%); 
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+  border: 2px solid rgb(255, 65, 65); 
+  display: inline-block
+}
+  
+button:hover {
+  background: #1C6EA4; }
+  
+button:active {
+  background: #144E75; }
+
+
+.home-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  letter-spacing: -1.6px;
+  word-spacing: -2.4px;
+  color: #730505;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-background {
+  background-color: #D0E4F5;
+  background-image: url("https://live.staticflickr.com/1245/776524828_ee85432b68_b.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0px 0px;
+  background-size: cover
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-flex {
+  background-color: #7bf7a3;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.index-background {
+  background-color: #7bf7a3;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0px 0px;
+  background-size: cover
 }

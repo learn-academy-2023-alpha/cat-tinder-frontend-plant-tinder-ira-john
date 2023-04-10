@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Form, FormGroup, Input, Label, Button } from "reactstrap"
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const PlantNew = ({createPlant}) => {
     const navigate = useNavigate()
@@ -19,10 +19,10 @@ const PlantNew = ({createPlant}) => {
         createPlant(newPlant)
         navigate("/plantindex")
     }
-    console.log(createPlant)
     return (
         <>
             <h1>Join us to find your perfect match!</h1>
+            <div className='card-flex'>
             <Form>
                 <FormGroup>
                     <Label for="name">Name</Label>
@@ -60,7 +60,13 @@ const PlantNew = ({createPlant}) => {
                     onChange={handleChange} />
                 </FormGroup>
             </Form>
+            </div>
+            <div className='card-flex'>
             <Button onClick={handleSubmit} name="submit">Submit</Button>
+            <Button>
+                <NavLink to={`/plantindex`}>Back to Index</NavLink>
+            </Button>
+            </div>
         </>
     )
 }

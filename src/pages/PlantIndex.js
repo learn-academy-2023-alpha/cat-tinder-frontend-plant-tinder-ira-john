@@ -6,7 +6,7 @@ const PlantIndex = ({plants}) => {
     return (
       <>
         <h1>Here are the lovley plants!</h1>
-        <p>Check out their Roots</p>
+        <div className="index-background">
         <div className="card-flex">
           {plants.map((plant, index) => {
             return (
@@ -39,9 +39,12 @@ const PlantIndex = ({plants}) => {
             )
           })}
         </div>
-        <Button>
-                    <NavLink to={`/plantnew`}>New Plant Profile</NavLink>
-                  </Button>
+        </div>
+              <div className="card-flex">
+              <Button>
+                <NavLink to={`/plantnew`}>New Plant Profile</NavLink>
+              </Button>
+              </div>
       </>
     )
   }

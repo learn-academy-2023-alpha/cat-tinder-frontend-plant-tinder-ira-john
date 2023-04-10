@@ -26,6 +26,7 @@ const PlantShow = ({plants, deletePlant}) => {
           alt={selectedPlant.name}
           src={selectedPlant.image}
         />
+        <div className="card-flex">
         <CardBody>
           <CardTitle tag="h5">
             {selectedPlant.name}
@@ -37,10 +38,11 @@ const PlantShow = ({plants, deletePlant}) => {
             Age: {selectedPlant.age}
           </CardSubtitle>
           <CardText>
-            Enjoys {selectedPlant.enjoys}
+            Enjoys: {selectedPlant.enjoy}
           </CardText>
           <Button onClick={handleSubmit}> Delete Plant </Button>
         </CardBody>
+        </div>
       </Card>
       
       )}

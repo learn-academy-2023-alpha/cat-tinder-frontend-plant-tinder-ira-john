@@ -26,7 +26,8 @@ import { useNavigate, useParams } from "react-router-dom"
     return (
         <>
             <div>Plant Tinder!</div>
-    
+
+            <div className="card-flex">
             <Form>
                 <FormGroup>
                     <Label for="name">Name</Label>
@@ -64,8 +65,9 @@ import { useNavigate, useParams } from "react-router-dom"
                     onChange={handleChange} />
                 </FormGroup>
             </Form>
+            </div>
             <Button onClick={handleSubmit} name="submit">Submit Updated Plant</Button>
-
+            
     </> 
     )
 }
